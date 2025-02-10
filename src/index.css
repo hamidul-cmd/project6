@@ -1,0 +1,238 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Urbanist", serif;
+}
+body {
+    background-color: #141414;
+    
+}
+
+
+@theme {
+
+    --color-white-90: #E4E4E7;
+    --color-white-95: #F1F1F3;
+    --color-white-97: #F7F7F8;
+    --color-white-99: #FCFCFD;
+ 
+ 
+    --color-gray-8: #141414;
+    --color-gray-10: #1A1A1A;
+    --color-gray-15: #262626;
+    --color-gray-20: #333333;
+    --color-gray-30: #4C4C4C;
+    --color-gray-40: #666666;
+    --color-gray-50: #808080;
+    --color-gray-60: #999999;
+
+
+    --color-Purple-60: #703bf7;
+    --color-Purple-65: #8254f8;
+    --color-Purple-70: #946cf9;
+    --color-Purple-75: #a585fa;
+    --color-Purple-90: #dbcefd;
+    --color-Purple-95: #ede6fe;
+    --color-Purple-97: #f4f0fe;
+    --color-Purple-99: #fbfaff;
+
+    --color-gr1:hsl(257, 92%, 60%);
+    --color-gr2: rgba(112, 59, 247, 0);
+
+    --color-buttonbg: rgba(255, 255, 255, 0.1);
+
+
+    --color-footerlogo1: rgba(26, 26, 26, 1);
+    --color-footerlogo2: rgba(26, 26, 26, 0);
+    --color-footerborder1: rgba(38, 38, 38, 1);
+    --color-footerborder2: rgba(38, 38, 38, 0);
+
+
+    --color-propertygr1: rgba(38, 38, 38, 1);
+    --color-propertygr2: rgba(38, 38, 38, 0);
+ 
+ 
+ 
+ 
+     --spacing-0_5: 2px;
+     --spacing-1_5: 6px;
+     --spacing-1_9: 9px;
+     --spacing-2_5: 10px;
+     --spacing-3_5: 14px;
+     --spacing-4_5: 16px;
+     --spacing-4_8: 18px;
+     --spacing-5_3: 23px;
+     --spacing-6_5: 25px;
+     --spacing-6_6: 26px;
+     --spacing-7_5: 30px;
+     --spacing-8_5: 34px;
+     --spacing-10_5: 42px;
+     --spacing-10_6: 44px;
+     --spacing-40_2: 162px;
+     --spacing-12_5: 50px;
+     --spacing-12_6: 54px;
+     --spacing-14_5: 60px;
+     --spacing-14_7: 62px;
+     --spacing-16_5: 70px;
+     --spacing-24_5: 100px;
+     --spacing-24_6: 120px;
+     --spacing-33: 132px;
+     --spacing-33: 132px;
+     --spacing-36_5: 150px;
+     --spacing-36_6: 162px;
+     --spacing-20_2: 82px;
+ 
+ 
+ 
+ 
+     --leading-130: 130%;
+     --leading-120: 120%;
+     --leading-150: 150%;
+ 
+     --container-wrapper: 1920px;
+ 
+     --breakpoint-xll: 1440px;
+     --breakpoint-3xl: 1920px;
+ 
+     
+     --shadow-ss2:0px 0px 0px 4px #191919;
+     --shadow-ss1:0px 0px 0px 6px #191919;
+     --ease-bounce: cubic-bezier(0.04, 1.25, 1, 1);
+ 
+     
+ }
+ header a.active {
+    background-color: #141414;
+    border-color: #262626;
+ }
+
+ .maruf {
+    background-image: url(assets/mhbg.png);
+ }
+ .hero__img {
+    background-image: url(assets/herobgm.png);
+ }
+ .about__hero__img {
+   background-image: url(assets/aboutherobg.png);
+ }
+ .black {
+    color: white;
+    border: 1px solid #262626;
+    border-radius: 8px;
+    padding: 14px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 150%;
+ }
+ .purple {
+    color: white;
+    background-color: #703bf7;
+    border-radius: 8px;
+    padding: 14px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 150%;
+ }
+ .boll {
+    animation: ring linear infinite 15s;
+ }
+ .boll:hover {
+    animation-play-state: paused;
+ }
+ .gotop {
+    animation: gotop 1.2s linear infinite alternate-reverse;
+ }
+ .grra {
+   background: linear-gradient(135deg, rgba(98, 0, 234, 0.3) 0%, rgba(18, 18, 18, 1) 20%);
+ }
+ .properti__hero {
+   background: linear-gradient(to right, #222, #111);
+ }
+
+
+.grra::before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   padding: 2px; /* Border thickness */
+   border-radius: 0px 10px 10px 10px ; /* Match the box's border-radius */
+   background: linear-gradient(90deg, rgba(112, 59, 247, 0.8), rgba(112, 59, 247, 0)); /* Gradient effect */
+   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+   -webkit-mask-composite: xor;
+   mask-composite: exclude;
+   pointer-events: none;
+}
+.unlock {
+   background-image: url(assets/serm.png);
+}
+.smart {
+   background-image: url(assets/smart.png);
+}
+
+ @keyframes gotop {
+    0% {
+        transform: translateY(-0.5rem);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+ }
+
+ @keyframes ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+ }
+
+ ::-webkit-scrollbar {
+    width: 15px;
+ }
+ ::-webkit-scrollbar-track {
+    background: #262626;
+ }
+ ::-webkit-scrollbar-thumb {
+    background: #4D4D4D;
+    border-radius: 20px;
+ }
+
+ @media (min-width:1440px) {
+    .maruf {
+        background-image: url(assets/phbg.png);
+    }
+    .hero__img {
+        background-image: url(assets/herobglp.png);
+    }
+    .about__hero__img {
+      background-image: url(assets/aboutherobglp.png);
+    }
+    .unlock {
+      background-image: url(assets/sarl.png);
+   }
+ }
+
+ @media (min-width:1920px) {
+    .hero__img {
+        background-image: url(assets/herobgpc.png);
+    }
+    .about__hero__img {
+      background-image: url(assets/aboutherobgpc.png);
+    }
+    .black {
+        padding: 18px 24px;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+    .purple {
+        padding: 18px 24px;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+    .unlock {
+      background-image: url(assets/sarp.png);
+   }
+
+ }
