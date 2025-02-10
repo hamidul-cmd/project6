@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropertyHero from "../components/PropertyHero";
 import Journey from "../components/Journey";
 import BottomHero from "../components/BottomHero";
@@ -6,8 +6,11 @@ import AboutTittle from "../components/AboutTittle";
 import Form from "../components/Form";
 import { Link } from "react-router";
 import All from "../components/All";
+import Regional from "../components/Regional";
+import International from "../components/International";
 
 function contact() {
+   const [active, secactive] = useState("all");
 
   return (
     <>
@@ -36,20 +39,22 @@ function contact() {
         </div>
         <div>
           <div className="top p-2.5 bg-gray-10 rounded-lg flex gap-2.5 mb-7.5 w-fit 3xl:rounded-xl xll:mb-10 3xl:mb-12.5">
-            <Link
+            <Link onClick={()=>{secactive("all")}}
               className="block text-center w-[105px] px-0 py-3.5 border border-gray-15 rounded-lg text-white text-sm font-medium leading-150 xll:w-[124px] 3xl:w-[158px] 3xl:text-lg 3xl:leading-150 3xl:rounded-[10px]"
             >
               All
             </Link>
-            <Link  className="block text-center w-[105px] px-0 py-3.5 border border-gray-15 rounded-lg text-white text-sm font-medium leading-150 xll:w-[124px] 3xl:w-[158px] 3xl:text-lg 3xl:leading-150 3xl:rounded-[10px]">
+            <Link onClick={()=>{secactive("regional")}}  className="block text-center w-[105px] px-0 py-3.5 border border-gray-15 rounded-lg text-white text-sm font-medium leading-150 xll:w-[124px] 3xl:w-[158px] 3xl:text-lg 3xl:leading-150 3xl:rounded-[10px]">
               Regional
             </Link>
-            <Link className="block text-center w-[105px] px-0 py-3.5 border border-gray-15 rounded-lg text-white text-sm font-medium leading-150 xll:w-[124px] 3xl:w-[158px] 3xl:text-lg 3xl:leading-150 3xl:rounded-[10px]">
+            <Link onClick={()=>{secactive("international")}} className="block text-center w-[105px] px-0 py-3.5 border border-gray-15 rounded-lg text-white text-sm font-medium leading-150 xll:w-[124px] 3xl:w-[158px] 3xl:text-lg 3xl:leading-150 3xl:rounded-[10px]">
               International
             </Link>
           </div>
           <section className="flex flex-wrap gap-5 justify-center xll:justify-between xll:flex-nowrap">
-            <All/>
+            {active==="all" && <All/>}
+            {active==="regional" && <Regional/>}
+            {active==="international" && <International/>}
           </section>
         </div>
       </section>
